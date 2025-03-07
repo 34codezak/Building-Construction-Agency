@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - Construction Agency</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Construction Agency</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects">
+        <h2>Our Completed Projects</h2>
+        <div class="project-gallery">
+            <div class="project-item">
+                <img src="images/project1.jpg" alt="Project 1" onclick="openLightbox(this)">
+                <h3>Modern Office Building</h3>
+                <p>A sleek and modern commercial office complex.</p>
+            </div>
+            <div class="project-item">
+                <img src="images/project2.jpg" alt="Project 2" onclick="openLightbox(this)">
+                <h3>Luxury Villa</h3>
+                <p>A high-end residential villa with modern architecture.</p>
+            </div>
+            <div class="project-item">
+                <img src="images/project3.jpg" alt="Project 3" onclick="openLightbox(this)">
+                <h3>Apartment Complex</h3>
+                <p>A multi-unit apartment building with premium facilities.</p>
+            </div>
+            <div class="project-item">
+                <img src="images/project4.jpg" alt="Project 4" onclick="openLightbox(this)">
+                <h3>Shopping Mall</h3>
+                <p>A spacious mall with a futuristic design.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lightbox Container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Construction Agency. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
