@@ -3,50 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us - Imara Construction</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        /* Custom styles */
+        .contact-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x600') no-repeat center center;
+            background-size: cover;
+            padding: 100px 0;
+            color: white;
+        }
+        .contact-card {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        .form-control:focus {
+            border-color: #fd7e14;
+            box-shadow: 0 0 0 0.25rem rgba(253, 126, 20, 0.25);
+        }
+        .btn-primary {
+            background-color: #fd7e14;
+            border-color: #fd7e14;
+        }
+        .btn-primary:hover {
+            background-color: #e67312;
+            border-color: #e67312;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Contact Us</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-building"></i> Imara Construction
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="contact-hero text-center mb-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Contact Us</h1>
+            <p class="lead">We'd love to hear about your project</p>
+        </div>
     </header>
 
-    <section class="contact">
-        <div class="contact-info">
-            <h2>Get in Touch</h2>
-            <p><strong>Email:</strong> info@imaraconstructionagency.com</p>
-            <p><strong>Phone:</strong> +254 712 345 678</p>
-            <p><strong>Address:</strong> Nairobi, Kenya</p>
-        </div>
+    <!-- Contact Section -->
+    <section class="contact py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Contact Info -->
+                <div class="col-lg-5">
+                    <div class="contact-card p-4 h-100 bg-white">
+                        <h2 class="mb-4"><i class="bi bi-envelope me-2"></i>Get in Touch</h2>
+                        
+                        <div class="mb-4">
+                            <h5 class="d-flex align-items-center">
+                                <i class="bi bi-envelope-fill text-primary me-3"></i> Email
+                            </h5>
+                            <p>info@imaraconstructionagency.com</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5 class="d-flex align-items-center">
+                                <i class="bi bi-telephone-fill text-primary me-3"></i> Phone
+                            </h5>
+                            <p>+254 712 345 678</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5 class="d-flex align-items-center">
+                                <i class="bi bi-geo-alt-fill text-primary me-3"></i> Address
+                            </h5>
+                            <p>Nairobi, Kenya</p>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h5>Business Hours</h5>
+                            <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                            <p>Saturday: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="contact-card p-4 h-100 bg-white">
+                        <h2 class="mb-4"><i class="bi bi-send me-2"></i>Send Us a Message</h2>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number (Optional)</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="bi bi-send-fill me-2"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Building & Construction Agency. All Rights Reserved.</p>
+    <!-- Map Section -->
+    <section class="map py-5 bg-light">
+        <div class="container">
+            <div class="contact-card p-0 overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8084773958867!2d36.82115931475397!3d-1.288899835979919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d664fec3cf%3A0x4e76b6a0e1e8e334!2sNairobi!5e0!3m2!1sen!2ske!4v1620000000000!5m2!1sen!2ske" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Imara Construction Agency. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Form Validation Script -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
